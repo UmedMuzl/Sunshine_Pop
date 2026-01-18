@@ -44,18 +44,16 @@ function Boathousetrade()
     return Tracker:ProviderCountForCode("boat_maximum")
 end
 function hascoronashines()
-    if Tracker:ProviderCountForCode("shine") >= Tracker:ProviderCountForCode("coronashines") then
-        return true
-    end
+    return Tracker:ProviderCountForCode("shine") >= Tracker:ProviderCountForCode("coronashines")
 end
 
 -- Moves
 function spray()
-    return has("fludd")
+    return has("fludd") --or has("nozzlespray")
 end
 
 function hover()
-    return has("hover")
+    return has("hover") --or has("nozzlehover")
 end
 
 function turbo()
@@ -68,23 +66,11 @@ end
 
 -- Yoshi Logic
 
-function isPinnaEnterable()
-    if has("progression") == has("progression_ticket") then
-        return has("pinna")
-    elseif has("progression") == has("progression_vanilla") then
-        return shines() >= 10
-    end
-end
-
-function Pinna4()
-    return has("fludd") and has("hover")
-end
-
 function yoshi()
     if has("yoshistart") == has("skip_pinna") then
         return has("yoshi")
     elseif has("yoshistart") == has("plaza_only") then
-        return isPinnaEnterable() and Pinna4()
+        return isPinnaEnterable() and asplasher()
     end
 end
 
@@ -93,7 +79,17 @@ function skipPinnaYoshi()
         return has("yoshi")
     end
 end
--- General Items
+-- Specific conditions
+
+function fiveshines()
+	return shines() > 4
+end
+
+function postcoronastate() -- Function for post Corona plaza states such as Airstrip Entrance
+	return hascoronashines()
+end
+
+-- General Items (or)
 
 function splasher()
     return has("fludd") or has("hover")
@@ -111,326 +107,241 @@ function squirter()
     return has("fludd") or has("yoshi")
 end
 
-
-function skipintro()
+function skipintro() -- Is this meant to match "skip_into" from the AP?
     return has("nozzlefluddless")
+end
+-- General Items (and)
+
+function asplasher()
+    return has("fludd") and has("hover")
+end
+
+function aheight()
+    return has("hover") and has("rocket")
+end
+
+function aspeed()
+    return has("fludd") and has("turbo")
+end
+
+function asquirter()
+    return has("fludd") and has("yoshi")
+end
+
+-- Progression Modes
+
+function isVanilla()
+    return has("progression") == has("progression_vanilla")
+end
+
+function isTicket()
+    return has("progression") == has("progression_ticket")
 end
 
 -- Entrance Functions
--- Function for Corona and Airstrip Entrances
+
+function buggedEntryLogic(ticket) -- I had forgotten, but all level entry logic is screwed in SMS AP v0.4.3-alpha b/c entry requirements don't exist in ticket mode when fluddless at least along with some other wierd behavior in vanilla mode.
+	return skipintro() and ((type(ticket) == "string" and isTicket() and has(ticket)) or isVanilla())
+end
+
+-- Corona
 
 function iscoronaenterable()
-    return hascoronashines()
+    return hascoronashines() and asplasher() --All requirements should actually be required unlike skip_into.
 end
 
 -- Bianco
 
-function isBiancoEnterable()
-    if has("progression") == has("progression_ticket") then
-        return has("bianco")
-    elseif has("progression") == has("progression_vanilla") then
-        return squirter()
-    end
-end
-
-function Bianco3()
-    return has("fludd")
-end
-
-function Bianco4()
-    return has("fludd") and has("hover")
+function isBiancoEnterable() --Enterable without requirements while Fluddless (still needs Bianco ticket in ticket mode though) or enterable with hover start ticket mode Bianco ticket.
+    --return syntax: (skipinto conditions) or ((entrance requirements) and ((ticket progression and has ticket) or (is vanilla progression and has shine count)))
+    return (skipintro() and ((isTicket() and has("bianco")) or isVanilla())) or (has("nozzlehover") and isTicket() and has("bianco")) or (squirter() and ((isTicket() and has("bianco")) or isVanilla()))
 end
 
 -- Ricco
 
 function isRiccoEnterable()
-    if has("progression") == has("progression_ticket") then
-        return has("ricco")
-    elseif has("progression") == has("progression_vanilla") then
-        return squirter() and shines() >= 3
-    end
+    --return syntax: (entrance requirements) and ((ticket progression and has ticket) or (is vanilla progression and has shine count))
+    return buggedEntryLogic("ricco") or ((splasher() or yoshi()) and ((isTicket() and has("ricco")) or (isVanilla() and shines() > 2)))
 end
-
 
 -- Gelato
 
 function isGelatoEnterable()
-    if has("progression") == has("progression_ticket") then
-        return has("gelato")
-    elseif has("progression") == has("progression_vanilla") then
-        return (has("fludd") or has("yoshi") or has("hover")) and shines() >= 5
-    end
+    --return syntax: (entrance requirements) and ((ticket progression and has ticket) or (is vanilla progression and has shine count))
+    return buggedEntryLogic("gelato") or ((splasher() or yoshi()) and ((isTicket() and has("gelato")) or (isVanilla() and shines() > 4)))
+end
+
+-- Pinna
+
+function isPinnaEnterable()
+    --return syntax: (entrance requirements) and ((ticket progression and has ticket) or (is vanilla progression and has shine count))
+    return buggedEntryLogic("pinna") or ((isTicket() and has("pinna")) or (isVanilla() and shines() > 9))
 end
 
 --Sirena
 
 function isSirenaEnterable()
-    if has("progression") == has("progression_ticket") then
-        return has("sirena")
-    elseif has("progression") == has("progression_vanilla") then
-        return has("yoshi")
-    end
+    --return syntax: (entrance requirements) and ((ticket progression and has ticket) or (is vanilla progression and has shine count))
+    return buggedEntryLogic("sirena") or (has("yoshi") and ((isTicket() and has("sirena")) or isVanilla()))
 end
 
 --Noki
 
 function isNokiEnterable()
-    if has("progression") == has("progression_ticket") then
-        return has("noki")
-    elseif has("progression") == has("progression_vanilla") then
-        return shines() >= 20
-    end
+    --return syntax: (entrance requirements) and ((ticket progression and has ticket) or (is vanilla progression and has shine count))
+    return buggedEntryLogic("noki") or ((isTicket() and has("noki")) or (isVanilla() and shines() > 19))
 end
 
 -- Pianta
 
 function isPiantaEnterable()
-    if has("progression") == has("progression_ticket") then
-        return has("pianta") and has("rocket")
-    elseif has("progression") == has("progression_vanilla") then
-        return shines() >= 10 and has("rocket")
-    end
+    --return syntax: (entrance requirements) and ((ticket progression and has ticket) or (is vanilla progression and has shine count))
+    return buggedEntryLogic("pianta") or (has("rocket") and ((isTicket() and has("pianta")) or (isVanilla() and shines() > 9)))
+end
+
+-- Sub-Regions (Episode logic)
+
+function bianco3()
+	--return syntax: episodes in any order setting condition or (prior non-entrance region/location requirements and current region's requirements)
+	return asplasher()
+end
+
+function bianco4()
+	return bianco3() and height()
+end
+
+function bianco5()
+	return bianco4() and height()
+end
+
+function bianco6()
+	return bianco5() and spray()
+end
+
+function bianco7()
+	return bianco6() and splasher()
+end
+
+function bianco8()
+	return bianco7() and spray()
+end
+
+function ricco2()
+	return spray()
+end
+
+function ricco3()
+	return ricco2()
+end
+
+function ricco4()
+	return ricco3() and height()
+end
+
+function ricco8()
+	return ricco4() and spray()
+end
+
+function gelato4()
+	return hover() and asplasher() --wiggler ahoy requires mirror madness
+end
+
+function gelato5() --eps 5-8.
+	return gelato4() and hover()
+end
+
+function gelato6()
+	return gelato5() and (hover() or turbo())
+end
+
+function pinna2()
+	return spray()
+end
+
+function pinna5() --eps 5-8; req red pirate ships which requires beach cannon's secret.
+	return pinna2() and (hover() and splasher()) and yoshi()
+end
+
+function pinna6()
+	return pinna5() and asplasher()
+end
+
+function sirena2() --eps 2-8.
+	return asplasher()
+end
+
+function sirena3() --eps 3-8.
+	return sirena2() and (yoshi() and splasher())
+end
+
+function sirena4() --eps 4-5 and 4-8 blue coins.
+	return sirena3() and asplasher()
+end
+
+function sirena5() --For blue coin.
+	return sirena3() and asplasher()
+end
+
+function sirena6() --For blue coins.
+	return sirena3() and asplasher()
+end
+
+function sirena7() --eps 7-8; yes ik this is the same function 4 times in a row but it is meant to help when things change.
+	return sirena3() and asplasher()
+end
+
+function noki2() --blue coins eps 2 and 4-8.
+	return asplasher()
+end
+
+function noki4() --blue coins eps 4 and 8.
+	return asplasher()
+end
+
+function noki6() --blue coins eps 6-8.
+	return asplasher()
+end
+
+function pianta2() --blue coins eps 2/4/6/8. No pianta1 function since it doesn't have any requirements.
+	return rocket() and splasher()
+end
+
+function pianta3() --blue coins.
+	return rocket() and spray()
+end
+
+function piantaonly5() --blue coins.
+	return rocket() and splasher()
+end
+
+function pianta5() --eps 5-8.
+	return yoshi()
+end
+
+function pianta6() --blue coins.
+	return pianta5() and yoshi()
+end
+
+function pianta8() -- soak the sun and blue coin.
+	return pianta5() and spray()
 end
 
 -- Boathouse
 
-function BH1()
-    if has("blues") == has("blues_on") or has("blues_boathouse") then
-        return blues() >= 10
-    end
+function BH(sAmount) -- Replaces BH1; sAmount meaning shine amount. How many boathouse shines are obtainable with how many blue coins have already been obtained.
+	sAmount = tonumber(sAmount)
+	if not sAmount then
+		sAmount = 1
+	end
+	return (has("blues") == has("blues_on") or has("blues_boathouse")) and blues() > ((sAmount * 10) - 1)
 end
 
-function BH2()
-    if has("blues") == has("blues_on") or has("blues_boathouse") then
-        return blues() >= 20
-    end
-end
-
-function BH3()
-    if has("blues") == has("blues_on") or has("blues_boathouse") then
-        return blues() >= 30
-    end
-end
-
-function BH4()
-    if has("blues") == has("blues_on") or has("blues_boathouse") then
-        return blues() >= 40
-    end
-end
-function BH5()
-    if has("blues") == has("blues_on") or has("blues_boathouse") then
-        return blues() >= 50
-    end
-end
-
-function BH6()
-    if has("blues") == has("blues_on") or has("blues_boathouse") then
-        return blues() >= 60
-    end
-end
-
-function BH7()
-    if has("blues") == has("blues_on") or has("blues_boathouse") then
-        return blues() >= 70
-    end
-end
-
-function BH8()
-    if has("blues") == has("blues_on") or has("blues_boathouse") then
-        return blues() >= 80
-    end
-end
-
-function BH9()
-    if has("blues") == has("blues_on") or has("blues_boathouse") then
-        return blues() >= 90
-    end
-end
-
-function BH10()
-    if has("blues") == has("blues_on") or has("blues_boathouse") then
-        return blues() >= 100
-    end
-end
-
-function BH11()
-    if has("blues") == has("blues_on") or has("blues_boathouse") then
-        return blues() >= 110
-    end
-end
-
-function BH12()
-    if has("blues") == has("blues_on") or has("blues_boathouse") then
-        return blues() >= 120
-    end
-end
-
-function BH13()
-    if has("blues") == has("blues_on") or has("blues_boathouse") then
-        return blues() >= 130
-    end
-end
-
-function BH14()
-    if has("blues") == has("blues_on") or has("blues_boathouse") then
-        return blues() >= 140
-    end
-end
-
-function BH15()
-    if has("blues") == has("blues_on") or has("blues_boathouse") then
-        return blues() >= 150
-    end
-end
-
-function BH16()
-    if has("blues") == has("blues_on") or has("blues_boathouse") then
-        return blues() >= 160
-    end
-end
-
-function BH17()
-    if has("blues") == has("blues_on") or has("blues_boathouse") then
-        return blues() >= 170
-    end
-end
-
-function BH18()
-    if has("blues") == has("blues_on") or has("blues_boathouse") then
-        return blues() >= 180
-    end
-end
-
-function BH19()
-    if has("blues") == has("blues_on") or has("blues_boathouse") then
-        return blues() >= 190
-    end
-end
-
-function BH20()
-    if has("blues") == has("blues_on") or has("blues_boathouse") then
-        return blues() >= 200
-    end
-end
-
-function BH21()
-    if has("blues") == has("blues_on") or has("blues_boathouse") then
-        return blues() >= 210
-    end
-end
-
-function BH22()
-    if has("blues") == has("blues_on") or has("blues_boathouse") then
-        return blues() >= 220
-    end
-end
-
-function BH23()
-    if has("blues") == has("blues_on") or has("blues_boathouse") then
-        return blues() >= 230
-    end
-end
-
-function BH24()
-    if has("blues") == has("blues_on") or has("blues_boathouse") then
-        return blues() == 240
-    end
-end
-
-function B1()
-    return Boathousetrade() >= 1
-end
-
-function B2()
-    return Boathousetrade() >= 2
-end
-
-function B3()
-    return Boathousetrade() >= 3
-end
-
-function B4()
-    return Boathousetrade() >= 4
-end
-
-function B5()
-    return Boathousetrade() >= 5
-end
-
-function B6()
-    return Boathousetrade() >= 6
-end
-
-function B7()
-    return Boathousetrade() >= 7
-end
-
-function B8()
-    return Boathousetrade() >= 8
-end
-
-function B9()
-    return Boathousetrade() >= 9
-end
-
-function B24()
-    return Boathousetrade() >= 24
-end
-
-function B10()
-    return Boathousetrade() >= 10
-end
-
-function B11()
-    return Boathousetrade() >= 11
-end
-
-function B12()
-    return Boathousetrade() >= 12
-end
-
-function B13()
-    return Boathousetrade() >= 13
-end
-
-function B14()
-    return Boathousetrade() >= 14
-end
-
-function B15()
-    return Boathousetrade() >= 15
-end
-
-function B16()
-    return Boathousetrade() >= 16
-end
-
-function B17()
-    return Boathousetrade() >= 17
-end
-
-function B18()
-    return Boathousetrade() >= 18
-end
-
-function B19()
-    return Boathousetrade() >= 19
-end
-
-function B20()
-    return Boathousetrade() >= 20
-end
-
-function B21()
-    return Boathousetrade() >= 21
-end
-
-function B22()
-    return Boathousetrade() >= 22
-end
-
-function B23()
-    return Boathousetrade() >= 23
+function BHT(sAmount) -- Boadhouse trades logic for visibility.
+	sAmount = tonumber(sAmount)
+	if not sAmount then
+		return Boathousetrade() > 0
+	end
+    return Boathousetrade() > sAmount
 end
 
 -- Episode Select

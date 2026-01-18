@@ -51,7 +51,7 @@
             },
             {
                 "img": "images/settings/fluddless.png",
-                "name": "FLUDDless",
+                "name": "FLUDDless Start",
                 "codes": "nozzlestart,nozzlefluddless",
                 "inherit_codes": false
             }
@@ -191,6 +191,26 @@
                 "img": "images/chapters/episode8.PNG",
                 "name": "Episode 8",
                 "codes": "episode,episode8",
+                "inherit_codes": false
+            }
+        ]
+    },
+    {
+        "name": "D-Pad",
+        "type": "progressive",
+        "loop": true,
+        "allow_disabled": false,
+        "stages": [
+            {
+                "img": "images/settings/gc_d-pad_nozzles.png",
+                "name": "D-Pad",
+                "codes": "dpad",
+                "inherit_codes": false
+            },
+            {
+                "img": "images/settings/dpad_blank.png",
+                "name": "D-Pad Hidden",
+                "codes": "dpad",
                 "inherit_codes": false
             }
         ]

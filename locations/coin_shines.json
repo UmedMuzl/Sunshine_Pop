@@ -3,24 +3,27 @@
         "name": "100 Coin Shine Sprites",
         "chest_unopened_img": "images/items/Shine_Sprite.png",
         "chest_opened_img": "images/items/Shine_Sprite_Grey.png",
-        "visibility_rules":["coin_shines_enabled"],
+        "visibility_rules": [ "coin_shines_enabled" ],
         "children": [
             {
                 "name": "Delfino Plaza 100 Coins",
-                "access_rules":["$skipintro", "$splasher"],
+                "access_rules": [
+                    "$spray",
+                    "$yoshi",
+                    "$skipintro"
+                ],
                 "children": [
                     {
                         "name": "Secret Shine",
-                        "access_rules": [
-                        ],
+                        "access_rules": [],
                         "sections": [
                             {
                                 "name": "Plaza 100 Coins",
-                                "access_rules":["$spray", "$rocket"],
+                                "access_rules": [ "$height" ],
                                 "item_count": 1
                             }
-                            ],
-                            "map_locations": [
+                        ],
+                        "map_locations": [
                             {
                                 "map": "Delfino Plaza",
                                 "x": 500,
@@ -37,7 +40,7 @@
             },
             {
                 "name": "Bianco Hills 100 Coins",
-                "access_rules":["$isBiancoEnterable"],
+                "access_rules": [ "$isBiancoEnterable" ],
                 "children": [
                     {
                         "name": "Secret Shine",
@@ -46,7 +49,7 @@
                         "sections": [
                             {
                                 "name": "Bianco 100 Coins",
-                                "access_rules":["$spray, $yoshi"],
+                                "access_rules": [ "$yoshi, $asplasher" ],
                                 "item_count": 1
                             }
                         ],
@@ -62,7 +65,7 @@
             },
             {
                 "name": "Ricco Harbor 100 Coins",
-                "access_rules":["$isRiccoEnterable"],
+                "access_rules": [ "$isRiccoEnterable" ],
                 "children": [
                     {
                         "name": "Secret Shine",
@@ -71,7 +74,7 @@
                         "sections": [
                             {
                                 "name": "Ricco 100 Coins",
-                                "access_rules":["$hover"],
+                                "access_rules": [ "$hover" ],
                                 "item_count": 1
                             }
                         ],
@@ -87,7 +90,7 @@
             },
             {
                 "name": "Gelato Beach 100 Coins",
-                "access_rules":["$isGelatoEnterable"],
+                "access_rules": [ "$isGelatoEnterable" ],
                 "children": [
                     {
                         "name": "Secret Shine",
@@ -96,7 +99,7 @@
                         "sections": [
                             {
                                 "name": "Gelato 100 Coins",
-                                "access_rules":["$spray, $yoshi"],
+                                "access_rules": [ "$splasher, $yoshi" ],
                                 "item_count": 1
                             }
                         ],
@@ -112,7 +115,7 @@
             },
             {
                 "name": "Pinna Park 100 Coins",
-                "access_rules":["$isPinnaEnterable"],
+                "access_rules": [ "$isPinnaEnterable" ],
                 "children": [
                     {
                         "name": "Secret Shine",
@@ -121,7 +124,7 @@
                         "sections": [
                             {
                                 "name": "Pinna 100 Coins",
-                                "access_rules":["$spray"],
+                                "access_rules": [ "$spray" ],
                                 "item_count": 1
                             }
                         ],
@@ -142,17 +145,17 @@
             },
             {
                 "name": "Sirena Beach 100 Coins",
-                "access_rules":["$isSirenaEnterable"],
+                "access_rules": [ "$isSirenaEnterable" ],
                 "children": [
                     {
                         "name": "Secret Shine",
                         "access_rules": [
-                            "$yoshi"
+                            "$asplasher"
                         ],
                         "sections": [
                             {
                                 "name": "Sirena 100 Coins",
-                                "access_rules":["$spray"],
+                                "access_rules": [ "$spray" ],
                                 "item_count": 1
                             }
                         ],
@@ -178,7 +181,7 @@
             },
             {
                 "name": "Noki Bay 100 Coins",
-                "access_rules":["$isNokiEnterable"],
+                "access_rules": [ "$isNokiEnterable" ],
                 "children": [
                     {
                         "name": "Secret Shine",
@@ -187,7 +190,7 @@
                         "sections": [
                             {
                                 "name": "Noki 100 Coins",
-                                "access_rules":["$hover"],
+                                "access_rules": [ "$hover" ],
                                 "item_count": 1
                             }
                         ],
@@ -208,7 +211,7 @@
             },
             {
                 "name": "Pianta Village 100 Coins",
-                "access_rules":["$isPiantaEnterable"],
+                "access_rules": [ "$isPiantaEnterable" ],
                 "children": [
                     {
                         "name": "Secret Shine",
@@ -217,7 +220,7 @@
                         "sections": [
                             {
                                 "name": "Pianta 100 Coins",
-                                "access_rules":["$spray, $yoshi"],
+                                "access_rules": [ "$rocket, $yoshi, $asplasher" ],
                                 "item_count": 1
                             }
                         ],

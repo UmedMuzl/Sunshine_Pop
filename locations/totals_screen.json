@@ -487,7 +487,7 @@
                     },
                     {
                         "name": "Blue Butterfly Flock",
-                        "ref": "Ricco Harbor Blue Coins/Blue Butterflies/Blue Coin"
+                        "ref": "Ricco Harbor Blue Coins/Butterflies/Blue Coin"
                     },
                     {
                         "name": "Eat Tower Wall Klamber",
@@ -572,11 +572,11 @@
                     },
                     {
                         "name": "Left Blue Bird in Ampetheathre",
-                        "ref": "Gelato Beach Blue Coins/Left Blue Bird/Blue Coin"
+                        "ref": "Gelato Beach Blue Coins/Left Bird/Blue Coin"
                     },
                     {
                         "name": "Right Blue Bird in Ampetheathre",
-                        "ref": "Gelato Beach Blue Coins/Right Blue Bird/Blue Coin"
+                        "ref": "Gelato Beach Blue Coins/Right Bird/Blue Coin"
                     },
                     {
                         "name": "Atop Highest Rope",
@@ -739,11 +739,11 @@
                     },
                     {
                         "name": "Blue Fish School",
-                        "ref": "Gelato Beach Blue Coins/Blue Fish School/Blue Coin"
+                        "ref": "Gelato Beach Blue Coins/Blue Fish/Blue Coin"
                     },
                     {
                         "name": "Red Fish School",
-                        "ref": "Gelato Beach Blue Coins/Red Fish School/Blue Coin"
+                        "ref": "Gelato Beach Blue Coins/Red Fish/Blue Coin"
                     }
                 ],
                 "map_locations": [
@@ -884,7 +884,7 @@
                     },
                     {
                         "name": "Under Pirate Ship Stairs",
-                        "ref": "Pinna Park Blue Coins/Stairs Underside/Blue Coin"
+                        "ref": "Pinna Park Blue Coins/Stairs/Blue Coin"
                     },
                     {
                         "name": "Peak of First Pirate Ship",
@@ -977,19 +977,19 @@
                     },
                     {
                         "name": "Park Blue Butterfly",
-                        "ref": "Pinna Park Blue Coins/Park Blue Butterfly/Blue Coin"
+                        "ref": "Pinna Park Blue Coins/Park Butterfly/Blue Coin"
                     },
                     {
                         "name": "Beach Blue Butterfly A",
-                        "ref": "Pinna Park Blue Coins/Beach Blue Butterfly A/Blue Coin"
+                        "ref": "Pinna Park Blue Coins/Beach Butterfly A/Blue Coin"
                     },
                     {
                         "name": "Beach Blue Butterfly B",
-                        "ref": "Pinna Park Blue Coins/Beach Blue Butterfly B/Blue Coin"
+                        "ref": "Pinna Park Blue Coins/Beach Butterfly B/Blue Coin"
                     },
                     {
                         "name": "Blue Bird by Entrance",
-                        "ref": "Pinna Park Blue Coins/Entrance Blue Bird/Blue Coin"
+                        "ref": "Pinna Park Blue Coins/Entrance Bird/Blue Coin"
                     },
                     {
                         "name": "M Graffiti on Orange Wall",
@@ -1039,7 +1039,7 @@
                     },
                     {
                         "name": "Blue Bird by Gazebo",
-                        "ref": "Pinna Park Blue Coins/Gazebo Blue Bird/Blue Coin"
+                        "ref": "Pinna Park Blue Coins/Pineapple Bird/Blue Coin"
                     },
                     {
                         "name": "Ledge by Roller Coaster",
@@ -1096,11 +1096,11 @@
                     },
                     {
                         "name": "Clean Male Noki",
-                        "ref": "Sirena Beach Blue Coins/Episode 1 Male Noki/Blue Coin"
+                        "ref": "Sirena Beach Blue Coins/Right Male Noki/Blue Coin"
                     },
                     {
                         "name": "Clean Female Noki",
-                        "ref": "Sirena Beach Blue Coins/Episode 1 Female Noki/Blue Coin"
+                        "ref": "Sirena Beach Blue Coins/Right Female Noki/Blue Coin"
                     }
                 ],
                 "map_locations": [
@@ -1154,7 +1154,7 @@
                     },
                     {
                         "name": "Spray Central Light Fixture",
-                        "ref": "Sirena Beach Blue Coins/Central Light Fixture/Blue Coin"
+                        "ref": "Sirena Beach Blue Coins/Big Light/Blue Coin"
                     },
                     {
                         "name": "Spray Second Floor Lamp",
@@ -1162,15 +1162,15 @@
                     },
                     {
                         "name": "Room Next to Pineapples",
-                        "ref": "Sirena Beach Blue Coins/Behind Pineapple Room/Blue Coin"
+                        "ref": "Sirena Beach Blue Coins/Box Hole/Blue Coin"
                     },
                     {
                         "name": "Room Under Glass Table",
-                        "ref": "Sirena Beach Blue Coins/Under the Glass Table/Blue Coin"
+                        "ref": "Sirena Beach Blue Coins/Glass Hole/Blue Coin"
                     },
                     {
                         "name": "Room Behind Dolpic Poster",
-                        "ref": "Sirena Beach Blue Coins/Behind Dolpic Poster/Blue Coin"
+                        "ref": "Sirena Beach Blue Coins/Dolpic Poster/Blue Coin"
                     },
                     {
                         "name": "Spray Bookshelf",
@@ -1213,7 +1213,7 @@
                     },
                     {
                         "name": "Destroy Pineapple Room Crate",
-                        "ref": "Sirena Beach Blue Coins/Pineapple Room Crate/Blue Coin"
+                        "ref": "Sirena Beach Blue Coins/Crate/Blue Coin"
                     }
                 ],
                 "map_locations": [
@@ -1251,11 +1251,11 @@
                     },
                     {
                         "name": "Clean Green Male Noki",
-                        "ref": "Sirena Beach Blue Coins/Episode 6 Male Noki/Blue Coin"
+                        "ref": "Sirena Beach Blue Coins/Left Male Noki/Blue Coin"
                     },
                     {
                         "name": "Clean Green Female Noki",
-                        "ref": "Sirena Beach Blue Coins/Episode 6 Female Noki/Blue Coin"
+                        "ref": "Sirena Beach Blue Coins/Left Female Noki/Blue Coin"
                     }
                 ],
                 "map_locations": [
@@ -1459,19 +1459,19 @@
                     },
                     {
                         "name": "Underwater Ruins Front Pillar",
-                        "ref": "Noki Bay Blue Coins/Front Pillar/Blue Coin"
+                        "ref": "Noki Bay Blue Coins/Deep Sea Front Pillar/Blue Coin"
                     },
                     {
                         "name": "Underwater Ruins Right Pillar",
-                        "ref": "Noki Bay Blue Coins/Right Pillar/Blue Coin"
+                        "ref": "Noki Bay Blue Coins/Deep Sea Right Pillar/Blue Coin"
                     },
                     {
                         "name": "Underwater Ruins Close Left Pillar",
-                        "ref": "Noki Bay Blue Coins/Close Left Pillar/Blue Coin"
+                        "ref": "Noki Bay Blue Coins/Deep Sea Close Left Pillar/Blue Coin"
                     },
                     {
                         "name": "Underwater Ruins Far Left Pillar",
-                        "ref": "Noki Bay Blue Coins/Far Left Pillar/Blue Coin"
+                        "ref": "Noki Bay Blue Coins/Deep Sea Far Left Pillar/Blue Coin"
                     }
                 ],
                 "map_locations": [
@@ -1772,7 +1772,7 @@
                     },
                     {
                         "name": "Blue Butterfly Flock",
-                        "ref": "Pianta Village Blue Coins/Blue Butterfly Flock/Blue Coin"
+                        "ref": "Pianta Village Blue Coins/Butterflies/Blue Coin"
                     }
                 ],
                 "map_locations": [
@@ -1853,7 +1853,7 @@
                     },
                     {
                         "name": "Blue Bird",
-                        "ref": "Pianta Village Blue Coins/Blue Bird/Blue Coin"
+                        "ref": "Pianta Village Blue Coins/Bird/Blue Coin"
                     }
                 ],
                 "map_locations": [

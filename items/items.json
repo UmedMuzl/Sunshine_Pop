@@ -1,104 +1,104 @@
 [
-  {
-    "name": "Spray  Nozzle",
-    "type": "toggle",
-    "img": "images/items/Spray_Nozzle.png",
-    "codes": "fludd"
-  },
-  {
-    "name": "Hover Nozzle",
-    "type": "toggle",
-    "img": "images/items/hover_nozzle.png",
-    "codes": "hover"
-  },
-  {
-    "name": "Rocket Nozzle",
-    "type": "toggle",
-    "img": "images/items/rocket_nozzle.png",
-    "codes": "rocket"
-  },
-  {
-    "name": "Turbo Nozzle",
-    "type": "toggle",
-    "img": "images/items/turbo_nozzle.png",
-    "codes": "turbo"
-  },
-  {
-    "name": "Shine Sprite",
-    "type": "consumable",
-    "img": "images/items/Shine_Sprite.png",
-    "max_quantity": 340,
-    "increment": 1,
-    "decrement": 1,
-    "initial_quantity": 0,
-    "overlay_background": "#000000",
-    "overlay_font_size": 8,
-    "codes": "shine"
-  },
-  {
-    "name": "Blue Coin",
-    "type": "consumable",
-    "img": "images/items/Blue_Coin.png",
-    "max_quantity": 240,
-    "increment": 1,
-    "decrement": 1,
-    "initial_quantity": 0,
-    "overlay_background": "#000000",
-    "overlay_font_size": 8,
-    "codes": "blue"
-  },
-  {
-    "name": "Bianco Ticket",
-    "type": "toggle",
-    "img": "images/items/Bianco_Ticket.png",
-    "codes": "bianco"
-  },
-  {
-    "name": "Ricco Ticket",
-    "type": "toggle",
-    "img": "images/items/Ricco_Ticket.png",
-    "codes": "ricco"
-  },
-  {
-    "name": "Gelato Ticket",
-    "type": "toggle",
-    "img": "images/items/Gelato_Ticket.png",
-    "codes": "gelato"
-  },
-  {
-    "name": "Pinna Ticket",
-    "type": "toggle",
-    "img": "images/items/Pinna_Ticket.png",
-    "codes": "pinna"
-  },
-  {
-    "name": "Sirena Ticket",
-    "type": "toggle",
-    "img": "images/items/Sirena_Ticket.png",
-    "codes": "sirena"
-  },
-  {
-    "name": "Noki Ticket",
-    "type": "toggle",
-    "img": "images/items/Noki_Ticket.png",
-    "codes": "noki"
-  },
-  {
-    "name": "Pianta Ticket",
-    "type": "toggle",
-    "img": "images/items/Pianta_Ticket.png",
-    "codes": "pianta"
-  },
-  {
-    "name": "Corona Access",
-    "type": "toggle",
-    "img": "images/items/Corona_Access.png",
-    "codes": "corona"
-  },
-  {
-    "name": "Yoshi",
-    "type": "toggle",
-    "img": "images/items/Yoshi.png",
-    "codes": "yoshi"
-  }
+    {
+        "name": "Spray Nozzle",
+        "type": "toggle",
+        "img": "images/items/Spray_Nozzle.png",
+        "codes": "fludd"
+    },
+    {
+        "name": "Hover Nozzle",
+        "type": "toggle",
+        "img": "images/items/hover_nozzle.png",
+        "codes": "hover"
+    },
+    {
+        "name": "Rocket Nozzle",
+        "type": "toggle",
+        "img": "images/items/rocket_nozzle.png",
+        "codes": "rocket"
+    },
+    {
+        "name": "Turbo Nozzle",
+        "type": "toggle",
+        "img": "images/items/turbo_nozzle.png",
+        "codes": "turbo"
+    },
+    {
+        "name": "Shine Sprite",
+        "type": "consumable",
+        "img": "images/items/Shine_Sprite.png",
+        "max_quantity": 340,
+        "increment": 1,
+        "decrement": 1,
+        "initial_quantity": 0,
+        "overlay_background": "#000000",
+        "overlay_font_size": 8,
+        "codes": "shine"
+    },
+    {
+        "name": "Blue Coin",
+        "type": "consumable",
+        "img": "images/items/Blue_Coin.png",
+        "max_quantity": 240,
+        "increment": 1,
+        "decrement": 1,
+        "initial_quantity": 0,
+        "overlay_background": "#000000",
+        "overlay_font_size": 8,
+        "codes": "blue"
+    },
+    {
+        "name": "Bianco Ticket",
+        "type": "toggle",
+        "img": "images/items/Bianco_Ticket.png",
+        "codes": "bianco"
+    },
+    {
+        "name": "Ricco Ticket",
+        "type": "toggle",
+        "img": "images/items/Ricco_Ticket.png",
+        "codes": "ricco"
+    },
+    {
+        "name": "Gelato Ticket",
+        "type": "toggle",
+        "img": "images/items/Gelato_Ticket.png",
+        "codes": "gelato"
+    },
+    {
+        "name": "Pinna Ticket",
+        "type": "toggle",
+        "img": "images/items/Pinna_Ticket.png",
+        "codes": "pinna"
+    },
+    {
+        "name": "Sirena Ticket",
+        "type": "toggle",
+        "img": "images/items/Sirena_Ticket.png",
+        "codes": "sirena"
+    },
+    {
+        "name": "Noki Ticket",
+        "type": "toggle",
+        "img": "images/items/Noki_Ticket.png",
+        "codes": "noki"
+    },
+    {
+        "name": "Pianta Ticket",
+        "type": "toggle",
+        "img": "images/items/Pianta_Ticket.png",
+        "codes": "pianta"
+    },
+    {
+        "name": "Corona Access",
+        "type": "toggle",
+        "img": "images/items/Corona_Access.png",
+        "codes": "corona"
+    },
+    {
+        "name": "Yoshi",
+        "type": "toggle",
+        "img": "images/items/Yoshi.png",
+        "codes": "yoshi"
+    }
 ]

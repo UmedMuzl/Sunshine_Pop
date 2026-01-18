@@ -1,11 +1,21 @@
 {
     "versions": [
         {
-            "package_version": "0.3.0",
-            "download_url": "https://github.com/AmedMusl/Sunshine_Pop/releases/download/v0.3.0/sms_poptracker.zip",
+            "package_version": "0.3.1",
+            "download_url": "https://github.com/UmedMuzl/Sunshine_Pop/releases/download/v0.3.1/sms_poptracker.zip",
             "sha256": "C89BE396BFFEE1682BEBF52E59278222D68467AF2A8C81F3107D27EF020A7FE6",
             "changelog": [
-                "Add support for Map Tracking"
+                "SMS poptracker update 0.3.1 to catchup to SMS-AP v0.4.3-alpha.",
+                "Updated shine visibility and logic, this means fluddless start now shows the proper checks.",
+                "Updated Blue coin visibility and logic, and changed the blue coin names to match the AP exactly.",
+                "Changed layout and added a togglable D-pad graphic, that I made myself (CU), to the tracker that shows the user how the nozzles are mapped to player controls.",
+                "Added and implemented new utility functions, some were renamed. Episode related utility functions are actually implemented now. Simplified hascoronashines function to match other similar functions. fiveshines function was added just for the burning pianta in plaza.",
+                "Changed boathouse functions.",
+                "Fixed entrance requirements as much as possible, might not fully match this version of the AP but the behavior was unintended anyways. If needed, check universal tracker when playing this AP version.",
+                "There are some weird bugs with the AP that have to do with some checks in gelato, I didn't get the chance to figure it out but will look into it if it appears in the newest version of the AP which is v0.5.1 at the time of writing.",
+                "Fixed typos, changed some spacing on purpose. Otherwise it was visual studio doing it on its own.",
+                "Updated .luarc.json (diagnostics.gobals) with a number of the new utility functions.",
+                "Updated gitignore to ignore VS related files."
             ]
         }
     ]
