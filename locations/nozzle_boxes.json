@@ -1,0 +1,519 @@
+[
+    {
+        "name": "Nozzle Boxes",
+        "chest_unopened_img": "images/items/Nozzle_Box.png",
+        "chest_opened_img": "images/items/Nozzle_Box_Grey.png",
+        "visibility_rules": [],
+        "children": [
+            /*{
+                "name": "Delfino Plaza Nozzle Boxes",
+                "access_rules": [
+                    "$spray",
+                    "$yoshi",
+                    "$skipintro"
+                ],
+                "children": [
+                    {
+                        "name": "Nozzle Boxes",
+                        "access_rules": [],
+                        "sections": [
+                            {
+                                "name": "Box (Plaza)",
+                                "access_rules": [ "" ],
+                                "visibility_rules": [ "false, allepisodes" ],
+                                "item_count": 1
+                            }
+                        ],
+                        "map_locations": [
+                            {
+                                "map": "Delfino Plaza",
+                                "x": 500,
+                                "y": 945
+                            },
+                            {
+                                "map": "Delfino Airstrip",
+                                "x": 649,
+                                "y": 650
+                            }
+                        ]
+                    }
+                ]
+            },*/
+            {
+                "name": "Bianco Hills",
+                "access_rules": [ "$isBiancoEnterable" ],
+                "children": [
+                    {
+                        "name": "Nozzle Box",
+                        "access_rules": [],
+                        "visibility_rules": [ "" ],
+                        "sections": [
+                            {
+                                "name": "Hover Box (Bianco)",
+                                "access_rules": [ "false" ],
+                                "visibility_rules": [ "false, allepisodes" ],
+                                "item_count": 1
+                            }
+                        ],
+                        "map_locations": [
+                            {
+                                "map": "Bianco Hills",
+                                "x": 612,
+                                "y": 620
+                            },
+                            {
+                                "map": "Bianco Hills",
+                                "x": 1407,
+                                "y": 585
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Rocket Box (Bianco)",
+                        "access_rules": [],
+                        "sections": [
+                            {
+                                "name": "Rocket Box (Bianco)",
+                                "access_rules": [ "$bianco4" ],
+                                "visibility_rules": [ "episode4", "allepisodes" ],
+                                "item_count": 1
+                            }
+                        ],
+                        "map_locations": [
+                            {
+                                "map": "Bianco Hills",
+                                "x": 885,
+                                "y": 985
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Turbo Box (Bianco)",
+                        "access_rules": [],
+                        "sections": [
+                            {
+                                "name": "Turbo Box (Bianco)",
+                                "access_rules": [ "$bianco6, $splasher" ],
+                                "visibility_rules": [ "episode6", "allepisodes" ],
+                                "item_count": 1
+                            }
+                        ],
+                        "map_locations": [
+                            {
+                                "map": "Bianco Hills",
+                                "x": 1805,
+                                "y": 530
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Nozzle Box",
+                        "access_rules": [],
+                        "sections": [
+                            {
+                                "name": "Yoshi Egg (Bianco)",
+                                "access_rules": [ "false" ],
+                                "visibility_rules": [ "false" ],
+                                "item_count": 1
+                            }
+                        ],
+                        "map_locations": [
+                            {
+                                "map": "Bianco Hills",
+                                "x": 90,
+                                "y": 660
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "Ricco Harbor",
+                "access_rules": [ "$isRiccoEnterable" ],
+                "children": [
+                    {
+                        "name": "Nozzle Box",
+                        "access_rules": [],
+                        "sections": [
+                            {
+                                "name": "Hover Box (Ricco)",
+                                "access_rules": [ "false" ],
+                                "visibility_rules": [ "false" ],
+                                "item_count": 1
+                            }
+                        ],
+                        "map_locations": [
+                            { //hover ep1
+                                "map": "Ricco Harbor",
+                                "x": 1122,
+                                "y": 170
+                            },
+                            { //hover 2 yellow submarine
+                                "map": "Ricco Harbor",
+                                "x": 997,
+                                "y": 430
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Rocket Box (Ricco)",
+                        "access_rules": [],
+                        "sections": [
+                            {
+                                "name": "Rocket Box (Ricco)",
+                                "access_rules": [ "$ricco3, $hover" ],
+                                "visibility_rules": [ "episode3", "allepisodes" ],
+                                "item_count": 1
+                            }
+                        ],
+                        "map_locations": [
+                            { //rocket ep1
+                                "map": "Ricco Harbor",
+                                "x": 1025,
+                                "y": 120
+                            },
+                            { //rocket 2 catwalk
+                                "map": "Ricco Harbor",
+                                "x": 968,
+                                "y": 550
+                            },
+                            { //rocket 3 ep3
+                                "map": "Ricco Harbor",
+                                "x": 660,
+                                "y": 590
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Turbo Box (Ricco)",
+                        "access_rules": [],
+                        "sections": [
+                            {
+                                "name": "Turbo Box (Ricco)",
+                                "access_rules": [ "$ricco8" ],
+                                "visibility_rules": [ "episode8", "allepisodes" ],
+                                "item_count": 1
+                            }
+                        ],
+                        "map_locations": [
+                            { //turbo ep3
+                                "map": "Ricco Harbor",
+                                "x": 670,
+                                "y": 625
+                            },
+                            { //turbo 2 wall kamber
+                                "map": "Ricco Harbor",
+                                "x": 720,
+                                "y": 260
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Nozzle Box",
+                        "access_rules": [],
+                        "sections": [
+                            {
+                                "name": "Yoshi Egg (Ricco)",
+                                "access_rules": [ "false" ],
+                                "visibility_rules": [ "false, allepisodes" ],
+                                "item_count": 1
+                            }
+                        ],
+                        "map_locations": [
+                            {
+                                "map": "Ricco Harbor",
+                                "x": 1100,
+                                "y": 200
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "Gelato Beach",
+                "access_rules": [ "$isGelatoEnterable" ],
+                "children": [
+                    {
+                        "name": "Nozzle Box",
+                        "access_rules": [],
+                        "sections": [
+                            {
+                                "name": "Hover Box (Gelato)",
+                                "access_rules": [ "false" ],
+                                "visibility_rules": [ "false" ],
+                                "item_count": 1
+                            }
+                        ],
+                        "map_locations": [
+                            {
+                                "map": "Gelato Beach",
+                                "x": 804,
+                                "y": 559
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Rocket Box (Gelato)",
+                        "access_rules": [],
+                        "sections": [
+                            {
+                                "name": "Rocket Box (Gelato)",
+                                "access_rules": [
+                                    "$gelato5, $splasher",
+                                    "$gelato5, $rocket"
+                                ],
+                                "visibility_rules": [ "episode5", "episode6", "episode7", "episode8", "allepisodes" ],
+                                "item_count": 1
+                            }
+                        ],
+                        "map_locations": [
+                            {
+                                "map": "Gelato Beach",
+                                "x": 947,
+                                "y": 565
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Turbo Box (Gelato)",
+                        "access_rules": [],
+                        "sections": [
+                            {
+                                "name": "Turbo Box (Gelato)",
+                                "access_rules": [ "$gelato4" ],
+                                "visibility_rules": [ "episode4", "allepisodes" ],
+                                "item_count": 1
+                            }
+                        ],
+                        "map_locations": [
+                            {
+                                "map": "Gelato Beach",
+                                "x": 1202,
+                                "y": 802
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Nozzle Box",
+                        "access_rules": [],
+                        "sections": [
+                            {
+                                "name": "Yoshi Egg (Gelato)",
+                                "access_rules": [ "false" ],
+                                "visibility_rules": [ "false" ],
+                                "item_count": 1
+                            }
+                        ],
+                        "map_locations": [
+                            {
+                                "map": "Gelato Beach",
+                                "x": 330,
+                                "y": 725
+                            }
+                        ]
+                    }
+                ]
+            },
+            /*{
+                "name": "Pinna Park Nozzle Boes",
+                "access_rules": [ "$isPinnaEnterable" ],
+                "children": [
+                    {
+                        "name": "Nozzle Box",
+                        "access_rules": [
+                        ],
+                        "sections": [
+                            {
+                                "name": "Nozzle (Pinna)",
+                                "access_rules": [ "" ],
+                                "visibility_rules": [ "false, allepisodes" ],
+                                "item_count": 1
+                            }
+                        ],
+                        "map_locations": [
+                            {
+                                "map": "Pinna Park",
+                                "x": 1390,
+                                "y": 1010
+                            }
+                        ]
+                    }
+                ]
+            },*/
+            /*{
+                "name": "Sirena Beach Nozzle Boxes",
+                "access_rules": [ "$isSirenaEnterable" ],
+                "children": [
+                    {
+                        "name": "Nozzle Box",
+                        "access_rules": [ "" ],
+                        "sections": [
+                            {
+                                "name": "Nozzle (Sirena)",
+                                "access_rules": [ "" ],
+                                "visibility_rules": [ "false, allepisodes" ],
+                                "item_count": 1
+                            }
+                        ],
+                        "map_locations": [
+                            {
+                                "map": "Sirena Beach",
+                                "x": 788,
+                                "y": 938
+                            }
+                        ]
+                    }
+                ]
+            },*/
+            {
+                "name": "Noki Bay",
+                "access_rules": [ "$isNokiEnterable" ],
+                "children": [ //Yoshi doesn't spawn in Noki at all.
+                    {
+                        "name": "Nozzle Box",
+                        "access_rules": [
+                        ],
+                        "sections": [
+                            {
+                                "name": "Hover Box (Noki)",
+                                "access_rules": [ "false" ],
+                                "visibility_rules": [ "false" ],
+                                "item_count": 1
+                            }
+                        ],
+                        "map_locations": [
+                            { //hover left
+                                "map": "Noki Bay",
+                                "x": 590,
+                                "y": 810
+                            },
+                            { //hover right
+                                "map": "Noki Bay",
+                                "x": 1160,
+                                "y": 850
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Rocket Box (Noki)",
+                        "access_rules": [
+                        ],
+                        "sections": [
+                            {
+                                "name": "Rocket Box (Noki)",
+                                "access_rules": [ "$height" ],
+                                "visibility_rules": [ "allepisodes" ],
+                                "item_count": 1
+                            }
+                        ],
+                        "map_locations": [
+                            { //rocket left
+                                "map": "Noki Bay",
+                                "x": 675,
+                                "y": 790
+                            },
+                            { //rocket right
+                                "map": "Noki Bay",
+                                "x": 1645,
+                                "y": 565
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Turbo Box (Noki)",
+                        "access_rules": [
+                        ],
+                        "sections": [
+                            {
+                                "name": "Turbo Box (Noki)",
+                                "access_rules": [ "$noki6, $hover" ],
+                                "visibility_rules": [ "episode6", "episode7", "episode8", "allepisodes" ],
+                                "item_count": 1
+                            },
+                            {
+                                "name": "Turbo Alcove Blue Coin",
+                                "visibility_rules": [ "allepisodes" ],
+                                "ref": "Noki Bay Blue Coins/Turbo Alcove/Blue Coin"
+                            }
+                        ],
+                        "map_locations": [
+                            {
+                                "map": "Noki Bay",
+                                "x": 1295,
+                                "y": 594
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "Pianta Village",
+                "access_rules": [ "$isPiantaEnterable" ],
+                "children": [
+                    {
+                        "name": "Nozzle Box",
+                        "access_rules": [],
+                        "sections": [
+                            {
+                                "name": "Hover Box On The Cloud (Pianta)",
+                                "access_rules": [ "false" ],
+                                "visibility_rules": [ "false" ], //"episode8", "allepisodes" ],
+                                "item_count": 1
+                            }
+                        ],
+                        "map_locations": [
+                            {
+                                "map": "Pianta Village",
+                                "x": 500,
+                                "y": 750
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Rocket Box (Pianta)",
+                        "access_rules": [],
+                        "sections": [
+                            {
+                                "name": "Rocket Box (Pianta)",
+                                "access_rules": [ "$pianta8, $hover" ],
+                                "visibility_rules": [ "episode8", "allepisodes" ],
+                                "item_count": 1
+                            }
+                        ],
+                        "map_locations": [
+                            {
+                                "map": "Pianta Village",
+                                "x": 1490,
+                                "y": 935
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "Corona Mountain",
+                "access_rules": [ "$isCoronaEnterable" ],
+                "children": [
+                    {
+                        "name": "Rocket Box (Corona)",
+                        "access_rules": [],
+                        "sections": [
+                            {
+                                "name": "Rocket Box (Corona)",
+                                "access_rules": [ "$asplasher" ],
+                                "item_count": 1
+                            }
+                        ],
+                        "map_locations": [
+                            {
+                                "map": "Corona Mountain",
+                                "x": 1125,
+                                "y": 855
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+]

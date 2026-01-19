@@ -83,6 +83,8 @@ LOCATION_MAPPING = {
 	[523007] = {"@Bianco Hills/Episode 8/The Red Coins of the Lake"},
 	[523176] = {"@Bianco Hills Blue Coins/Beehive/Blue Coin"},
 	[523196] = {"@Bianco Hills Blue Coins/Blue Butterfly/Blue Coin"},
+	[523872] = {"@Nozzle Boxes/Bianco Hills/Rocket Box (Bianco)/Rocket Box (Bianco)"},
+	[523873] = {"@Nozzle Boxes/Bianco Hills/Turbo Box (Bianco)/Turbo Box (Bianco)"},
 	-- Ricco Harbor
 	[523101] = {"@Ricco Harbor 100 Coins/Secret Shine/Ricco 100 Coins"},
 	[523221] = {"@Ricco Harbor Blue Coins/Tower Wall/Blue Coin"},
@@ -125,6 +127,8 @@ LOCATION_MAPPING = {
 	[523225] = {"@Ricco Harbor Blue Coins/Wall Klamber/Blue Coin"},
 	[523242] = {"@Ricco Harbor Blue Coins/High Platform M/Blue Coin"},
 	[523245] = {"@Ricco Harbor Blue Coins/Fish Basket/Blue Coin"},
+	[523874] = {"@Nozzle Boxes/Ricco Harbor/Rocket Box (Ricco)/Rocket Box (Ricco)"},
+	[523875] = {"@Nozzle Boxes/Ricco Harbor/Turbo Box (Ricco)/Turbo Box (Ricco)"},
 	-- Gelato Beach
 	[523020] = {"@Gelato Beach/Episode 1/Dune Bud Sand Castle Secret"},
 	[523021] = {"@Gelato Beach/Episode 2/Mirror Madness! Tilt, Slam, Bam!"},
@@ -167,6 +171,8 @@ LOCATION_MAPPING = {
 	[523273] = {"@Gelato Beach Blue Coins/Blue Cataquack/Blue Coin"},
 	[523279] = {"@Gelato Beach Blue Coins/Yellow Goo Dune Bud/Blue Coin"},
 	[523295] = {"@Gelato Beach Blue Coins/Beehive/Blue Coin"},
+	[523876] = {"@Nozzle Boxes/Gelato Beach/Rocket Box (Gelato)/Rocket Box (Gelato)"},
+	[523877] = {"@Nozzle Boxes/Gelato Beach/Turbo Box (Gelato)/Turbo Box (Gelato)"},
 	-- Pinna Park
 	[523030] = {"@Pinna Park/Episode 1/Mecha-Bowser Appears!"},
 	[523032] = {"@Pinna Park/Episode 3/Red Coins of the Pirate Ships"},
@@ -292,7 +298,9 @@ LOCATION_MAPPING = {
 	[523497] = {"@Noki Bay Blue Coins/Deep Sea Close Left Pillar/Blue Coin"}, 
 	[523499] = {"@Noki Bay Blue Coins/Deep Sea Far Left Pillar/Blue Coin"}, 
 	[523494] = {"@Noki Bay Blue Coins/Spawn O/Blue Coin"}, 
-	[523498] = {"@Noki Bay Blue Coins/Boathouse O/Blue Coin"}, 
+	[523498] = {"@Noki Bay Blue Coins/Boathouse O/Blue Coin"},
+	[523884] = {"@Nozzle Boxes/Noki Bay/Rocket Box (Noki)/Rocket Box (Noki)"},
+	[523885] = {"@Nozzle Boxes/Noki Bay/Turbo Box (Noki)/Turbo Box (Noki)"},
 	-- Pianta Village
 	[523060] = {"@Pianta Village/Episode 1/Chain Chomplets Unchained"}, 
 	[523065] = {"@Pianta Village/Episode 2/Il Piantissimo's Crazy Climb"}, 
@@ -335,6 +343,7 @@ LOCATION_MAPPING = {
 	[523427] = {"@Pianta Village Blue Coins/Pianta in Need G/Blue Coin"}, 
 	[523428] = {"@Pianta Village Blue Coins/Pianta in Need H/Blue Coin"}, 
 	[523441] = {"@Pianta Village Blue Coins/Bird/Blue Coin"}, 
+	[523882] = {"@Nozzle Boxes/Pianta Village/Rocket Box (Pianta)/Rocket Box (Pianta)"}, 
 	-- Corona Mountain
 	[523540] = {"@Corona Mountain Blue Coins/Platform/Blue Coin"}, 
 	[523541] = {"@Corona Mountain Blue Coins/Back Right Lava/Blue Coin"}, 
@@ -346,6 +355,7 @@ LOCATION_MAPPING = {
 	[523547] = {"@Corona Mountain Blue Coins/Far Back Left Lava/Blue Coin"}, 
 	[523548] = {"@Corona Mountain Blue Coins/Far Back Right Lava/Blue Coin"}, 
 	[523549] = {"@Corona Mountain Blue Coins/Right Lava/Blue Coin"}, 
+	[523886] = {"@Nozzle Boxes/Corona Mountain/Rocket Box (Corona)/Rocket Box (Corona)"}, 
 	-- Others
 	[523088] = {"@Epilogue/Red Coin Waterworks"},
 	[523120] = {"@Delfino Plaza Blue Coins/Ice Cube/Blue Coin"},

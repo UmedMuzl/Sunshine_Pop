@@ -79,11 +79,8 @@ function skipPinnaYoshi()
         return has("yoshi")
     end
 end
--- Specific conditions
 
-function fiveshines()
-	return shines() > 4
-end
+-- Specific conditions
 
 function postcoronastate() -- Function for post Corona plaza states such as Airstrip Entrance
 	return hascoronashines()
@@ -140,63 +137,64 @@ end
 
 -- Entrance Functions
 
-function buggedEntryLogic(ticket) -- I had forgotten, but all level entry logic is screwed in SMS AP v0.4.3-alpha b/c entry requirements don't exist in ticket mode when fluddless at least along with some other wierd behavior in vanilla mode.
-	return skipintro() and ((type(ticket) == "string" and isTicket() and has(ticket)) or isVanilla())
+function entranceLogic(region,shineC)
+	-- ((ticket progression and has ticket) or (is vanilla progression and has shine count))
+	return (isTicket() and type(region) == "string" and has(string.lower(region))) or (isVanilla() and shines() >= (tonumber(shineC) or 0))
 end
 
 -- Corona
 
-function iscoronaenterable()
+function isCoronaEnterable()
     return hascoronashines() and asplasher() --All requirements should actually be required unlike skip_into.
 end
 
 -- Bianco
 
-function isBiancoEnterable() --Enterable without requirements while Fluddless (still needs Bianco ticket in ticket mode though) or enterable with hover start ticket mode Bianco ticket.
-    --return syntax: (skipinto conditions) or ((entrance requirements) and ((ticket progression and has ticket) or (is vanilla progression and has shine count)))
-    return (skipintro() and ((isTicket() and has("bianco")) or isVanilla())) or (has("nozzlehover") and isTicket() and has("bianco")) or (squirter() and ((isTicket() and has("bianco")) or isVanilla()))
+function isBiancoEnterable()
+    --return syntax: (skipinto conditions or entrance requirements) and entranceLogic.
+    return (skipintro() or squirter()) and entranceLogic("bianco", 0)
 end
 
 -- Ricco
 
 function isRiccoEnterable()
-    --return syntax: (entrance requirements) and ((ticket progression and has ticket) or (is vanilla progression and has shine count))
-    return buggedEntryLogic("ricco") or ((splasher() or yoshi()) and ((isTicket() and has("ricco")) or (isVanilla() and shines() > 2)))
+    --return syntax: (entrance requirements) and entranceLogic.
+    return (splasher() or yoshi()) and entranceLogic("ricco", 3)
 end
 
 -- Gelato
 
 function isGelatoEnterable()
-    --return syntax: (entrance requirements) and ((ticket progression and has ticket) or (is vanilla progression and has shine count))
-    return buggedEntryLogic("gelato") or ((splasher() or yoshi()) and ((isTicket() and has("gelato")) or (isVanilla() and shines() > 4)))
+    --return syntax: (entrance requirements) and entranceLogic.
+    return (splasher() or yoshi()) and entranceLogic("gelato", 5)
 end
 
 -- Pinna
 
 function isPinnaEnterable()
-    --return syntax: (entrance requirements) and ((ticket progression and has ticket) or (is vanilla progression and has shine count))
-    return buggedEntryLogic("pinna") or ((isTicket() and has("pinna")) or (isVanilla() and shines() > 9))
+    --return syntax: (entrance requirements) and entranceLogic.
+    return entranceLogic("pinna", 10)
 end
 
 --Sirena
 
 function isSirenaEnterable()
-    --return syntax: (entrance requirements) and ((ticket progression and has ticket) or (is vanilla progression and has shine count))
-    return buggedEntryLogic("sirena") or (has("yoshi") and ((isTicket() and has("sirena")) or isVanilla()))
+    --return syntax: (entrance requirements) and entranceLogic.
+    return yoshi() and entranceLogic("sirena", 0)
 end
 
 --Noki
 
 function isNokiEnterable()
-    --return syntax: (entrance requirements) and ((ticket progression and has ticket) or (is vanilla progression and has shine count))
-    return buggedEntryLogic("noki") or ((isTicket() and has("noki")) or (isVanilla() and shines() > 19))
+    --return syntax: (entrance requirements) and entranceLogic.
+    return entranceLogic("noki", 20)
 end
 
 -- Pianta
 
 function isPiantaEnterable()
-    --return syntax: (entrance requirements) and ((ticket progression and has ticket) or (is vanilla progression and has shine count))
-    return buggedEntryLogic("pianta") or (has("rocket") and ((isTicket() and has("pianta")) or (isVanilla() and shines() > 9)))
+    --return syntax: (entrance requirements) and entranceLogic.
+    return rocket() and entranceLogic("pianta", 10)
 end
 
 -- Sub-Regions (Episode logic)
@@ -215,7 +213,7 @@ function bianco5()
 end
 
 function bianco6()
-	return bianco5() and spray()
+	return bianco5() and spray() and height()
 end
 
 function bianco7()
@@ -243,7 +241,7 @@ function ricco8()
 end
 
 function gelato4()
-	return hover() and asplasher() --wiggler ahoy requires mirror madness
+	return hover() and splasher() and spray() --wiggler ahoy requires mirror madness
 end
 
 function gelato5() --eps 5-8.
@@ -259,7 +257,7 @@ function pinna2()
 end
 
 function pinna5() --eps 5-8; req red pirate ships which requires beach cannon's secret.
-	return pinna2() and (hover() and splasher()) and yoshi()
+	return pinna2() and (hover() and splasher())
 end
 
 function pinna6()
@@ -267,7 +265,7 @@ function pinna6()
 end
 
 function sirena2() --eps 2-8.
-	return asplasher()
+	return spray()
 end
 
 function sirena3() --eps 3-8.
@@ -294,7 +292,7 @@ function noki2() --blue coins eps 2 and 4-8.
 	return asplasher()
 end
 
-function noki4() --blue coins eps 4 and 8.
+function noki4() --blue coins eps 4 and 8. requires red coins in a bottle and boss of tricky ruins.
 	return asplasher()
 end
 
@@ -307,7 +305,7 @@ function pianta2() --blue coins eps 2/4/6/8. No pianta1 function since it doesn'
 end
 
 function pianta3() --blue coins.
-	return rocket() and spray()
+	return rocket() and splasher()
 end
 
 function piantaonly5() --blue coins.
@@ -315,7 +313,7 @@ function piantaonly5() --blue coins.
 end
 
 function pianta5() --eps 5-8.
-	return yoshi()
+	return piantaonly5() and yoshi()
 end
 
 function pianta6() --blue coins.

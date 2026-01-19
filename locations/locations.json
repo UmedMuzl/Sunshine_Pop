@@ -199,7 +199,7 @@
                 "sections": [
                     {
                         "name": "Shine Gate",
-                        "access_rules": [ "$rocket" ],
+                        "access_rules": [ "$spray, $rocket" ],
                         "item_count": 1
                     }
                 ],
@@ -448,7 +448,7 @@
                     {
                         "name": "Petey Piranha Strikes Back",
                         "access_rules": [
-                            "$spray"
+                            "$spray, $height"
                         ],
                         "item_count": 1
                     }
@@ -762,7 +762,7 @@
                 "sections": [
                     {
                         "name": "Mirror Madness! Tilt, Slam, Bam!",
-                        "access_rules": [ "$asplasher" ],
+                        "access_rules": [ "$spray" ],
                         "item_count": 1
                     }
                 ],
@@ -778,7 +778,7 @@
                 "name": "Episode 3",
                 "visibility_rules": [ "episode3", "allepisodes" ],
                 "access_rules": [
-                    "$asplasher"
+                    "$spray"
                 ],
                 "sections": [
                     {
@@ -894,7 +894,7 @@
                 "sections": [
                     {
                         "name": "It's Shadow Mario! After Him!",
-                        "access_rules": [ "$splasher" ],
+                        "access_rules": [ "$spray" ],
                         "item_count": 1
                     }
                 ],
@@ -1052,7 +1052,7 @@
                 "name": "Episode 5",
                 "visibility_rules": [ "episode5", "allepisodes" ],
                 "access_rules": [
-                    "pinna5"
+                    "$pinna5"
                 ],
                 "sections": [
                     {
@@ -1085,7 +1085,7 @@
                     },
                     {
                         "name": "Red Coins in the Yoshi-Go-Round",
-                        "access_rules": [ "$yoshi" ],
+                        "access_rules": [ "$yoshi, $hover" ],
                         "item_count": 1
                     }
                 ],
@@ -1107,7 +1107,7 @@
                     {
                         "name": "Shadow Mario in the Park",
                         "access_rules": [
-                            "$asplasher"
+                            "$pinna6, $yoshi, $spray"
                         ],
                         "item_count": 1
                     }
@@ -1130,7 +1130,7 @@
                     {
                         "name": "Roller Coaster Balloons",
                         "access_rules": [
-                            "$asplasher"
+                            "$pinna6, $yoshi, $spray"
                         ],
                         "item_count": 1
                     }
@@ -1159,7 +1159,7 @@
                     {
                         "name": "The Manta Storm",
                         "access_rules": [
-                            "$asplasher"
+                            "$spray"
                         ],
                         "item_count": 1
                     }
@@ -1388,9 +1388,7 @@
                 "sections": [
                     {
                         "name": "Red Coins in a Bottle",
-                        "access_rules": [
-                            "$asplasher"
-                        ],
+                        "access_rules": [ "$asplasher" ],
                         "item_count": 1
                     }
                 ],
@@ -1432,9 +1430,7 @@
                 "sections": [
                     {
                         "name": "Il Piantissimo's Surf Swim",
-                        "access_rules": [
-                            "$asplasher"
-                        ],
+                        "access_rules": [ "$asplasher" ],
                         "item_count": 1
                     }
                 ],
@@ -1449,21 +1445,19 @@
             {
                 "name": "Episode 6",
                 "visibility_rules": [ "episode6", "allepisodes" ],
-                "access_rules": [
-                    "$noki6"
-                ],
+                "access_rules": [ "$noki6" ], // This is fine for now but could cause problems for changes down the line? - CU
                 "sections": [
                     {
                         "name": "The Shell's Secret",
                         "access_rules": [
-                            "$asplasher"
+                            "$hover"
                         ],
                         "item_count": 1
                     },
                     {
                         "name": "Red Coins on the Half Shell",
                         "access_rules": [
-                            "$asplasher"
+                            "$hover"
                         ],
                         "item_count": 1
                     }
@@ -1500,12 +1494,14 @@
             {
                 "name": "Episode 8",
                 "visibility_rules": [ "episode8", "allepisodes" ],
-                "access_rules": [],
+                "access_rules": [
+                    "$asplasher"
+                ],
                 "sections": [
                     {
                         "name": "The Red Coin Fish",
                         "access_rules": [
-                            "$asplasher"
+                            "$hover"
                         ],
                         "item_count": 1
                     }
@@ -1581,7 +1577,7 @@
                     {
                         "name": "Il Piantissimo's Crazy Climb",
                         "access_rules": [
-                            "$rocket, $spray"
+                            "$rocket"
                         ],
                         "item_count": 1
                     }
@@ -1693,7 +1689,7 @@
                 "name": "Episode 7",
                 "visibility_rules": [ "episode7", "allepisodes" ],
                 "access_rules": [
-                    "$yoshi"
+                    "$yoshi, $splasher"
                 ],
                 "sections": [
                     {
@@ -1722,8 +1718,7 @@
                     {
                         "name": "Fluff Festival Coin Hunt",
                         "access_rules": [
-                            "$hover",
-                            "$rocket"
+                            "$height"
                         ],
                         "item_count": 1
                     }
@@ -1767,7 +1762,7 @@
             {
                 "name": "Episode 1",
                 "access_rules": [
-                    "$iscoronaenterable"
+                    "$isCoronaEnterable"
                 ],
                 "sections": [
                     {

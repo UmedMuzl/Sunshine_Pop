@@ -95,6 +95,7 @@
                     {
                         "name": "Secret Shine",
                         "access_rules": [
+                            "$gelato5"
                         ],
                         "sections": [
                             {
@@ -190,7 +191,7 @@
                         "sections": [
                             {
                                 "name": "Noki 100 Coins",
-                                "access_rules": [ "$hover" ],
+                                "access_rules": [ "$asplasher" ],
                                 "item_count": 1
                             }
                         ],

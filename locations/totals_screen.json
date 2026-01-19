@@ -111,6 +111,10 @@
                     {
                         "name": "Clean the Pianta Tourist",
                         "ref": "Bianco Hills Blue Coins/Tourist (Changes Location Each Episode)/Blue Coin"
+                    },
+                    {
+                        "name": "Rocket Box",
+                        "ref": "@Nozzle Boxes/Bianco Hills/Nozzle Box/Rocket Box (Bianco)"
                     }
                 ],
                 "map_locations": [
@@ -188,6 +192,10 @@
                     {
                         "name": "In the Air by Chuckster Momma",
                         "ref": "Bianco Hills Blue Coins/Chuckster Momma/Blue Coin"
+                    },
+                    {
+                        "name": "Turbo Box",
+                        "ref": "Nozzle Boxes/Bianco Hills/Nozzle Box/Turbo Box (Bianco)"
                     }
                 ],
                 "map_locations": [

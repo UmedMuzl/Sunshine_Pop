@@ -34,6 +34,7 @@ Tracker:AddMaps("maps/maps.json")
 Tracker:AddLocations("locations/locations.json")
 Tracker:AddLocations("locations/blue_coins.json")
 Tracker:AddLocations("locations/coin_shines.json")
+Tracker:AddLocations("locations/nozzle_boxes.json")
 Tracker:AddLocations("locations/totals_screen.json")
 
 -- Layout
