@@ -2,8 +2,8 @@
     "versions": [
         {
             "package_version": "0.4.0",
-            "download_url": "https://github.com/UmedMuzl/Sunshine_Pop/releases/download/v0.4.0/sms_poptracker.zip",
-            "sha256": "62edeb49a280e70e91c2d3daa2a2bafd63f81afd0fb2fa494a427283b3c4433a",
+            "download_url": "https://github.com/UmedMuzl/Sunshine_Pop/archive/refs/tags/v0.4.0.zip",
+            "sha256": "94b3d40dc8f2b34fd551fd0ddd645affde1a05a1e85625e253b5ad067d4b140f",
             "changelog": [
                 "SMS PopTracker update to 0.4.0 to catch up to 0.5.3AP logic",
                 "Fixed autotracking (had to remap the IDs due to a APworld Logic Change)",
