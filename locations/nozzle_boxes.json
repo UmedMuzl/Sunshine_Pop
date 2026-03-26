@@ -484,7 +484,7 @@
                         "sections": [
                             {
                                 "name": "Turbo Box (Bianco)",
-                                "access_rules": [ "$bianco6, $splasher" ],
+                                "access_rules": [ "$bianco6, $splasher", "$turbo"],
                                 "visibility_rules": [ "episode6", "allepisodes" ],
                                 "item_count": 1
                             }
