@@ -1,10 +1,10 @@
 {
   "name": "Super Mario Sunshine Poptracker",
   "game_name": "Super Mario Sunshine",
-  "package_version": "0.3.1",
+  "package_version": "0.4.0",
   "package_uid": "ap_sunshine",
   "platform": "gamecube",
-  "author": "UmedMuzl, CompletelyUnbelievable, Schwartz Gandhi",
+  "author": "UmedMuzl, Schwartz Gandhi, LiterallyNoOne,  sparky5000",
   "variants": {
     "standard": {
       "display_name": "Map Tracker",
@@ -13,5 +13,5 @@
       ]
     }
   },
-  "versions_url": "https://raw.githubusercontent.com/UmedMuzl/Sunshine_Pop/refs/heads/main/versions.json"
+  "versions_url": "https://raw.githubusercontent.com/AmedMusl/Sunshine_Pop/refs/heads/main/versions.json"
 }

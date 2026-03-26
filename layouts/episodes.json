@@ -6,10 +6,9 @@
         "content": [
             {
                 "type": "itemgrid",
-                "item_size": "250,67",
+                "item_size": 120,
                 "item_margin": "2, 2",
                 "h_alignment": "center",
-                "v_alignment": "center",
                 "rows": [
                     ["episode"]
                 ]
