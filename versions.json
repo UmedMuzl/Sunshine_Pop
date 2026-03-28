@@ -1,15 +1,13 @@
 {
     "versions": [
         {
-            "package_version": "0.4.1",
-            "download_url": "https://github.com/UmedMuzl/Sunshine_Pop/archive/refs/tags/v0.4.1.zip",
-            "sha256": "3b226fcc1c3e064dc910fd102561f9f77b3187ab7f56019f9de1db6c3a59b28f",
+            "package_version": "0.4.3",
+            "download_url": "https://github.com/LiterallyNoOne1/Sunshine_Pop/archive/refs/tags/v0.4.3.zip",
+            "sha256": "b84183d47a6a97252e5845ea441ba828bc78614fb7da6870e281dfbf96ac6e12",
             "changelog": [
-                "SMS PopTracker update to 0.4.1 to catch up to 0.5.3AP logic",
-                "Fixed autotracking (had to remap the IDs due to a APworld Logic Change)",
-                "Added Nozzle Box Checks to the Tracker",
-                "Updated shine visibility and logic, this means fluddless start now shows the proper checks.",
-                "Tweaked Blue Coin logic"                
+                "Major logic overhaul to both increase accuracy and add new options",
+                "Added a setting that displays possible out of logic locations split into movement and movement+glitches",
+                "Added new internal functions for easier logic, and modified some existing ones"
             ]
         }
     ]
